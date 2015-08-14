@@ -40,12 +40,18 @@ function fly(robot) {
        bot.drone.forward(0.2);
     });
     after(7*1000, function(speed){
+        bot.drone.forward(0.2);
         bot.drone.right(0.2);
     });
     after(9*1000, function(speed){
+        bot.drone.forward(0.2);
+        bot.drone.right(0.2);
         bot.drone.back(0.2);
     });
     after(11*1000, function(speed){
+        bot.drone.forward(0.2);
+        bot.drone.right(0.2);
+        bot.drone.back(0.2);
         bot.drone.left(0.2);
     });
 
