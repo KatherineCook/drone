@@ -12,7 +12,7 @@ Cylon.robot()
         connection: "ardrone"
     })
     .device("nav",{
-        driver: "ardrone",
+        driver: "ardrone-nav",
         connection: "ardrone"
     })
     .on("ready", fly);
@@ -22,13 +22,13 @@ Cylon.robot()
 var bot;
 function fly(robot) {
     bot=robot;
-    bot.drone.config('general:navdata_demo', 'TRUE');
+    //bot.drone.config('general:navdata_demo', 'TRUE');
     bot.nav.on("navdata", function(data) {
-        console.log(data);
+        //console.log(data);
     });
-    bot.nav.on("navdata", function(data) {
+    bot.nav.on("altitudeChange", function(data) {
         console.log("Altitude:", data);
-        if (altitude>1.5){
+        if (data>1.5){
             bot.drone.land();
         }
     });
