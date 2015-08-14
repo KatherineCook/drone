@@ -39,20 +39,39 @@ function fly(robot) {
     after(5*1000, function (speed) {
        bot.drone.forward(0.2);
     });
+
+    after(6*1000, function(){
+        bot.drone.hover(0.5*1000)
+    });
+
     after(7*1000, function(speed){
         bot.drone.forward(0);
         bot.drone.right(0.2);
     });
+
+    after(8*1000, function(){
+        bot.drone.hover(0.5*1000)
+    });
+
     after(9*1000, function(speed){
         bot.drone.forward(0);
         bot.drone.right(0);
         bot.drone.back(0.2);
     });
+
+    after(10*1000, function(){
+        bot.drone.hover(0.5*1000)
+    });
+
     after(11*1000, function(speed){
         bot.drone.forward(0);
         bot.drone.right(0);
         bot.drone.back(0);
         bot.drone.left(0.2);
+    });
+
+    after(12*1000, function(){
+        bot.drone.hover(0.5*1000)
     });
 
     after(13*1000, function() {
